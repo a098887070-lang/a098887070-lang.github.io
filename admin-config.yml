@@ -1,0 +1,171 @@
+# 仙豐網站後台設定（Sveltia CMS）
+# __GITHUB_REPO__ 會在建置時自動換成 content/site.json 裡的 github_repo
+backend:
+  name: github
+  repo: __GITHUB_REPO__
+  branch: main
+  commit_messages:
+    create: "新增 {{collection}}：{{slug}}"
+    update: "修改 {{collection}}：{{slug}}"
+    delete: "刪除 {{collection}}：{{slug}}"
+    uploadMedia: "上傳圖片 {{path}}"
+    deleteMedia: "刪除圖片 {{path}}"
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: products
+    label: 商品
+    label_singular: 商品
+    description: 新增或修改商品。按「儲存」後約 1～2 分鐘網站會自動更新。
+    folder: content/products
+    format: json
+    extension: json
+    create: true
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [title, order]
+    fields:
+      - { label: 商品名稱, name: title, widget: string }
+      - label: 分類
+        name: category
+        widget: relation
+        collection: categories
+        value_field: "{{slug}}"
+        search_fields: [name, full_name]
+        display_fields: [full_name]
+      - { label: 價格文字, name: price_text, widget: string, default: 請洽詢, required: false, hint: "例：請洽詢、NT$350／組" }
+      - { label: 主圖, name: image, widget: image, required: false }
+      - label: 更多圖片
+        name: gallery
+        widget: list
+        required: false
+        field: { label: 圖片, name: src, widget: image }
+      - { label: 商品說明（尺寸、材質、整箱數量）, name: body, widget: markdown, required: false }
+      - { label: 首頁推薦, name: featured, widget: boolean, default: false, required: false }
+      - { label: 上架, name: published, widget: boolean, default: true, required: false }
+      - { label: 排序（數字小的排前面）, name: order, widget: number, value_type: int, default: 9999, required: false }
+      - { label: Google 搜尋摘要（可空白，空白會自動用說明前段）, name: seo_description, widget: text, required: false }
+      - { label: 舊網址, name: old_url, widget: string, required: false, readonly: true }
+
+  - name: categories
+    label: 商品分類
+    label_singular: 分類
+    folder: content/categories
+    format: json
+    extension: json
+    create: true
+    slug: "c{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    identifier_field: name
+    summary: "{{full_name}}"
+    fields:
+      - { label: 分類名稱, name: name, widget: string }
+      - { label: 後台顯示名稱（例：茶葉鐵罐 > 四兩）, name: full_name, widget: string }
+      - label: 上層分類（第一層請留空）
+        name: parent
+        widget: relation
+        collection: categories
+        value_field: "{{slug}}"
+        search_fields: [name, full_name]
+        display_fields: [full_name]
+        required: false
+      - { label: 分類圖片, name: image, widget: image, required: false }
+      - { label: 分類說明（會顯示在分類頁並給 Google 看）, name: description, widget: text, required: false }
+      - { label: 排序（數字小的排前面）, name: order, widget: number, value_type: int, default: 9999, required: false }
+      - { label: 隱藏這個分類, name: hidden, widget: boolean, default: false, required: false }
+
+  - name: albums
+    label: 包裝耗材相簿
+    label_singular: 相簿
+    folder: content/albums
+    format: json
+    extension: json
+    create: true
+    slug: "a{{year}}{{month}}{{day}}{{hour}}{{minute}}"
+    identifier_field: title
+    summary: "{{title}}"
+    fields:
+      - { label: 相簿名稱, name: title, widget: string }
+      - { label: 封面, name: cover, widget: image, required: false }
+      - label: 照片
+        name: photos
+        widget: list
+        summary: "{{fields.caption}}"
+        fields:
+          - { label: 照片, name: src, widget: image }
+          - { label: 說明, name: caption, widget: string, required: false }
+      - { label: 排序, name: order, widget: number, value_type: int, default: 99, required: false }
+
+  - name: pages
+    label: 文字頁面
+    label_singular: 頁面
+    folder: content/pages
+    format: json
+    extension: json
+    create: true
+    slug: "page-{{year}}{{month}}{{day}}{{hour}}{{minute}}"
+    identifier_field: title
+    summary: "{{title}}"
+    fields:
+      - { label: 標題, name: title, widget: string }
+      - { label: 內容, name: body, widget: markdown, required: false }
+      - label: 圖片集
+        name: gallery
+        widget: list
+        required: false
+        field: { label: 圖片, name: src, widget: image }
+      - { label: 發布, name: published, widget: boolean, default: true, required: false }
+      - { label: Google 搜尋摘要, name: seo_description, widget: text, required: false }
+
+  - name: settings
+    label: 網站設定
+    files:
+      - name: site
+        label: 店家資料與選單
+        file: content/site.json
+        format: json
+        fields:
+          - { label: 店名, name: name, widget: string }
+          - { label: 簡稱（頁首顯示）, name: short_name, widget: string }
+          - { label: 副標, name: tagline, widget: string }
+          - { label: 網站網址（例 https://www.xxx.com，不要結尾斜線）, name: base_url, widget: string, required: false }
+          - { label: GitHub 儲存庫（帳號/名稱）, name: github_repo, widget: string }
+          - { label: 網站描述（Google 搜尋摘要）, name: description, widget: text }
+          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: 電話, name: phone, widget: string }
+          - { label: LINE 顯示文字, name: line_id, widget: string }
+          - { label: LINE 加好友連結, name: line_url, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: 地址, name: address, widget: string }
+          - { label: 營業時間, name: hours, widget: string }
+          - { label: Facebook 粉絲專頁, name: facebook, widget: string, required: false }
+          - { label: 頁尾標語, name: motto, widget: string, required: false }
+          - label: 首頁直排標語（每行一句）
+            name: motto_vertical
+            widget: list
+            field: { label: 標語, name: t, widget: string }
+          - { label: Google Search Console 驗證碼, name: google_site_verification, widget: string, required: false }
+          - { label: Google Analytics 評估 ID（G-開頭）, name: ga_id, widget: string, required: false }
+          - label: 主選單
+            name: menu
+            widget: list
+            fields:
+              - { label: 文字, name: label, widget: string }
+              - { label: 連結, name: url, widget: string }
+      - name: home
+        label: 首頁
+        file: content/home.json
+        format: json
+        fields:
+          - { label: 主視覺說明文字, name: lede, widget: text }
+          - label: 主視覺輪播圖
+            name: banners
+            widget: list
+            fields:
+              - { label: 圖片, name: image, widget: image }
+              - { label: 圖片說明, name: alt, widget: string, required: false }
+          - { label: 推薦區標題, name: featured_title, widget: string }
+          - { label: 介紹標題, name: intro_title, widget: string }
+          - { label: 介紹內容, name: intro_body, widget: markdown }

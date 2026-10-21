@@ -1,0 +1,58 @@
+{
+  "name": "仙豐茶葉包裝材料行",
+  "short_name": "仙豐茶業",
+  "tagline": "茶葉包裝材料・茶葉禮盒・茶具",
+  "base_url": "https://a098887070-lang.github.io",
+  "github_repo": "a098887070-lang/a098887070-lang.github.io",
+  "description": "台中神岡仙豐茶葉包裝材料行，供應茶葉禮盒、茶葉鐵罐、真空袋、提袋提盒、紙盒紙罐、茶甕、茶具與脫氧劑，從一兩到三十斤包裝一次備齊，歡迎批發與客製詢價。",
+  "logo": "",
+  "phone": "(04) 2561-6088",
+  "line_id": "0919722899",
+  "line_url": "https://line.me/ti/p/PxMIYVGNND",
+  "email": "tea0919722899@gmail.com",
+  "address": "台中市神岡區民權路35巷20號",
+  "street": "民權路35巷20號",
+  "locality": "神岡區",
+  "region": "台中市",
+  "hours": "週一至週五 9:00–18:00；週六請先來電，週日公休",
+  "opening_hours_schema": "Mo-Fr 09:00-18:00",
+  "facebook": "https://www.facebook.com/tea025/",
+  "motto": "採好茶、喝好茶、賣好茶。",
+  "motto_vertical": [
+    "採好茶",
+    "喝好茶",
+    "賣好茶"
+  ],
+  "google_site_verification": "",
+  "ga_id": "",
+  "menu": [
+    {
+      "label": "首頁",
+      "url": "/"
+    },
+    {
+      "label": "仙豐故事",
+      "url": "/about/"
+    },
+    {
+      "label": "全部商品",
+      "url": "/products/"
+    },
+    {
+      "label": "隨身包茶葉禮盒",
+      "url": "/category/mn2/"
+    },
+    {
+      "label": "茶葉包裝耗材",
+      "url": "/packaging/"
+    },
+    {
+      "label": "公版私用系列",
+      "url": "/custom/"
+    },
+    {
+      "label": "聯絡我們",
+      "url": "/contact/"
+    }
+  ]
+}
