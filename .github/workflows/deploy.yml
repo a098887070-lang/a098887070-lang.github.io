@@ -1,0 +1,51 @@
+# 每次後台存檔（推送到 main）就自動：搬移舊站圖片 → 產生網站 → 發布到 GitHub Pages
+name: 發布網站
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 第一次上傳時整理檔案、匯入舊站資料
+        run: if [ -f bootstrap.py ]; then python bootstrap.py; fi
+      - name: 下載舊站圖片到本站（只處理還沒搬過的）
+        run: python tools/migrate_images.py
+      - name: 圖片有變動就存回儲存庫
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "site-bot"
+            git config user.email "site-bot@users.noreply.github.com"
+            git add -A
+            git commit -m "整理檔案、搬移舊站圖片 [skip ci]"
+            git push
+          fi
+      - name: 產生網站
+        run: python build.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
