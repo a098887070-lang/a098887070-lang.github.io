@@ -52,8 +52,10 @@ files = sorted(f for f in os.listdir(PD) if f.endswith(".json"))
 for i, fn in enumerate(files, 1):
     fp = os.path.join(PD, fn)
     p = json.load(open(fp, encoding="utf-8"))
-    url = p.get("old_url")
-    if not url: continue
+    url = "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=" + fn[:-5]
+    if p.get("old_url") != url:
+        p["old_url"] = url
+        with open(fp, "w", encoding="utf-8") as f: json.dump(p, f, ensure_ascii=False, indent=2)
     html = get(url)
     if not html: print("讀不到", url, flush=True); continue
     soup = BeautifulSoup(html, "html.parser")
@@ -82,4 +84,12 @@ for i, fn in enumerate(files, 1):
     if i % 25 == 0: print(f"{i}/{len(files)}：補上詳情 {fixed}、附加圖片 {imgs_added}", flush=True)
 
 print(flush=True); print(f"完成：處理 {done} 項，補上產品詳情 {fixed} 項，附加圖片 {imgs_added} 張")
+# 修正圖片搬移規則：只處理圖片檔，不再誤改商品舊網址
+mp = os.path.join(ROOT, "tools", "migrate_images.py")
+NEWPAT = r'''PAT = re.compile(r"https?://(?:picture\.smartweb\.tw|tea025\.smartweb\.tw)/[^\s\"')\]]+?\.(?:jpe?g|png|gif|webp|svg)(?:\?[^\s\"')\]]*)?", re.I)'''
+src = open(mp, encoding="utf-8").read().split("\n")
+src = [NEWPAT if l.startswith("PAT = re.compile(") else l for l in src]
+open(mp, "w", encoding="utf-8").write("\n".join(src))
+junk = os.path.join(ROOT, "static", "uploads", "misc", "index.php")
+if os.path.exists(junk): os.remove(junk)
 os.remove(os.path.abspath(__file__))
