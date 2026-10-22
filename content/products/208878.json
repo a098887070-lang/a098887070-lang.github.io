@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208878.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208878_16582098620.jpg"
+  ],
+  "body": "產品編號:Z1-4TS-G\n鐵罐尺寸:外徑8.3cm*8.3 *高15cm\n備註:凸蓋(卡式)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 6003,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208878"
 }

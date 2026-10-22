@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 UP = os.path.join(ROOT, "static", "uploads")
-PAT = re.compile(r"https?://(?:picture\.smartweb\.tw|tea025\.smartweb\.tw)/[^\s\"')\]]+")
+PAT = re.compile(r"https?://(?:picture\.smartweb\.tw|tea025\.smartweb\.tw)/[^\s\"')\]]+?\.(?:jpe?g|png|gif|webp|svg)(?:\?[^\s\"')\]]*)?", re.I)
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36", "Referer": "https://tea025.smartweb.tw/"}
 
 def local_path(url):

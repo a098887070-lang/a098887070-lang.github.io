@@ -3,11 +3,13 @@
   "category": "30998",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208597.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208597_16580313000.jpg"
+  ],
+  "body": "產品編號:Z32-FCH-03\n鐵罐尺寸:外徑7.5*高11.5cm\n備註:平蓋(內塞)",
   "featured": false,
   "published": true,
   "order": 1005,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208597"
 }

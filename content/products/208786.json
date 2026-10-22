@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208786.gif",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208786_16581223780.jpg"
+  ],
+  "body": "產品編號:Z12-UM-03\n鐵罐尺寸:外徑8.1cm *高15.4cm\n備註:平蓋(內塞)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 4004,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208786"
 }

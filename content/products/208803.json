@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208803.gif",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208803_16581294790.jpg"
+  ],
+  "body": "產品編號:Z12-TR-06\n鐵罐尺寸:外徑8.1cm *高15.4cm\n備註:平蓋(內塞)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 4014,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208803"
 }

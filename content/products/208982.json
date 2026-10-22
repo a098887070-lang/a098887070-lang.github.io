@@ -3,11 +3,13 @@
   "category": "31013",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208982.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208982_16582982380.jpg"
+  ],
+  "body": "產品編號:鐵桶03\n鐵桶尺寸:外徑16.5cm *高23cm\n備註:(內塞)",
   "featured": false,
   "published": true,
   "order": 1002,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208982"
 }

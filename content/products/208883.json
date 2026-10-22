@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208883.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208883_16582110870.jpg"
+  ],
+  "body": "產品編號:Z14T120\n鐵罐尺寸:外徑8.4cm *高15.3cm\n備註:平蓋(卡式)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 6005,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208883"
 }

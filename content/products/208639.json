@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208639.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208639_16580352450.jpg"
+  ],
+  "body": "產品編號:Z1-4T213\n鐵罐尺寸:外徑8.3cm *高15.3cm\n備註:平蓋(卡式)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 1002,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208639"
 }

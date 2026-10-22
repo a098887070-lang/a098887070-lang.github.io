@@ -3,11 +3,15 @@
   "category": "30998",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208594.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208594_16576178290.jpg",
+    "/uploads/prod/other_208594_16576180980.jpg",
+    "/uploads/prod/other_208594_16580312070.jpg"
+  ],
+  "body": "產品編號:Z1-2120S\n鐵罐尺寸:外徑8.4*10.3cm\n備註:平蓋(卡式)\n整箱數量:160只(另有優惠)\nZ1-2P120S\n紙盒尺寸:8.5*8.5*11.2cm\nA-1提袋\n提袋尺寸:正面寬16*側寬8*高17cm",
   "featured": false,
   "published": true,
   "order": 1001,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208594"
 }

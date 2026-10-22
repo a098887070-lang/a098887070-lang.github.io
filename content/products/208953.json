@@ -3,11 +3,13 @@
   "category": "31133",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208953.png",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208953_16582233970.jpg"
+  ],
+  "body": "產品編號:Z55-NB603\n鐵罐尺寸:外徑7.5cm*7.5 *高17.1cm\n備註:平蓋(卡式)\n整箱數量:80只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 1004,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208953"
 }

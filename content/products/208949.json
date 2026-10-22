@@ -3,11 +3,14 @@
   "category": "31133",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208949.png",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208949_16582229440.jpg",
+    "/uploads/prod/other_208949_16582229441.jpg"
+  ],
+  "body": "產品編號:Z55-NA601(封籤另購)\n鐵罐尺寸:外徑7.5cm *高18.3cm\n備註:平蓋(內塞)\n整箱數量:80只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 1000,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208949"
 }

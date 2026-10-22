@@ -3,11 +3,17 @@
   "category": "30997",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208591.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208591_16576168510.jpg",
+    "/uploads/prod/other_208591_16576168521.jpg",
+    "/uploads/prod/other_208591_16576168522.jpg",
+    "/uploads/prod/other_208591_16576168523.jpg",
+    "/uploads/prod/other_208591_16580309270.jpg"
+  ],
+  "body": "產品編號:Z1-1P4-06\n外盒尺寸:正面22.2*側面寬5.5*高8.1cm\n**(此款限整組販售)**\n鐵罐尺寸:外徑5.4*7.6cm",
   "featured": false,
   "published": true,
   "order": 1000,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208591"
 }

@@ -3,11 +3,13 @@
   "category": "30999",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208872.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208872_16582084440.jpg"
+  ],
+  "body": "產品編號:Z1-4T294B\n鐵罐尺寸:外徑8.5cm *高14.6cm\n備註:凸蓋(內塞)\n整箱數量:120只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 5012,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208872"
 }

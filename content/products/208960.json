@@ -3,11 +3,13 @@
   "category": "31000",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208960.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208960_16582246020.jpg"
+  ],
+  "body": "產品編號:Z21-YS801A\n鐵罐尺寸:外徑9.7cm*高18cm\n備註:凸蓋(內塞)\n整箱數量:50只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 1000,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208960"
 }

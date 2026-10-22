@@ -3,11 +3,13 @@
   "category": "30998",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208631.png",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208631_16580317110.jpg"
+  ],
+  "body": "產品編號:Z55-NB205\n鐵罐尺寸:外徑7.5*7.5*高9.6cm\n備註:平蓋(卡式)\n整箱數量:160只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 2003,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208631"
 }

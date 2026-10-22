@@ -3,11 +3,13 @@
   "category": "30998",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208771.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208771_16581120920.jpg"
+  ],
+  "body": "產品編號:Z1-4TS-338\n鐵罐尺寸:外徑8.3cm*8.3 *高18.8cm\n備註:凸蓋(卡式)\n整箱數量:80只(另有優惠)",
   "featured": false,
   "published": true,
   "order": 2012,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208771"
 }

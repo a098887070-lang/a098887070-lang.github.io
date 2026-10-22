@@ -3,11 +3,13 @@
   "category": "30998",
   "price_text": "請洽詢",
   "image": "/uploads/prod/title_208595.jpg",
-  "gallery": [],
-  "body": "",
+  "gallery": [
+    "/uploads/prod/other_208595_16580312490.jpg"
+  ],
+  "body": "產品編號:Z32-FCH-01\n鐵罐尺寸:外徑7.5*高11.5cm\n備註:平蓋((內塞)\n整箱數量:120只(另有優惠)\nZ32-FCH-100\n2兩2入紙盒尺寸:正面寬15.2*7.5*高13.5cm\nA-35\n提袋尺寸:正面寬17.*8.5*高16.7cm",
   "featured": false,
   "published": true,
   "order": 1003,
   "seo_description": "",
-  "old_url": "/uploads/misc/index.php"
+  "old_url": "https://tea025.smartweb.tw/index.php?module=product&mn=1&f=content&tid=208595"
 }
