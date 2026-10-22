@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 PD = os.path.join(ROOT, "content", "products")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/126 Safari/537.36"}
 
-def get(url, tries=8):
+def get(url, tries=4):
     for k in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
@@ -17,7 +17,7 @@ def get(url, tries=8):
                 time.sleep(0.8); return b
         except Exception:
             pass
-        time.sleep(4 * (k + 1))
+        time.sleep(3 * (k + 1))
     return None
 
 def exists(url):
@@ -55,7 +55,7 @@ for i, fn in enumerate(files, 1):
     url = p.get("old_url")
     if not url: continue
     html = get(url)
-    if not html: print("讀不到", url); continue
+    if not html: print("讀不到", url, flush=True); continue
     soup = BeautifulSoup(html, "html.parser")
     pic = soup.select_one(".product_detail_picture")
     row = pic.find_parent(class_="sm-product-detail") if pic else None
@@ -72,14 +72,14 @@ for i, fn in enumerate(files, 1):
         src = (im.get("src") or "").strip().split("?")[0]
         if not src or "/title_" in src: continue
         full = src.replace("_thumb.", ".")
-        use = full if exists(full) else src
+        use = full
         if use not in have:
             gallery.append(use); have.add(use); imgs_added += 1; changed = True
     if changed:
         p["gallery"] = gallery
         with open(fp, "w", encoding="utf-8") as f: json.dump(p, f, ensure_ascii=False, indent=2)
     done += 1
-    if i % 50 == 0: print(f"{i}/{len(files)}：補上詳情 {fixed}、附加圖片 {imgs_added}", flush=True)
+    if i % 25 == 0: print(f"{i}/{len(files)}：補上詳情 {fixed}、附加圖片 {imgs_added}", flush=True)
 
-print(f"完成：處理 {done} 項，補上產品詳情 {fixed} 項，附加圖片 {imgs_added} 張")
+print(flush=True); print(f"完成：處理 {done} 項，補上產品詳情 {fixed} 項，附加圖片 {imgs_added} 張")
 os.remove(os.path.abspath(__file__))
