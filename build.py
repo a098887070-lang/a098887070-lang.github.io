@@ -363,12 +363,12 @@ def build_products():
   {f'<a class="pd-cat" href="{U["cat"](cid)}">{esc(cats[cid].get("name"))}</a>' if cid in cats else ''}
   <h1>{esc(p.get("title"))}</h1>
   <p class="pd-price">{esc(p.get("price_text") or "請洽詢")}</p>
+  {f'<div class="prose pd-body">{md(p.get("body"))}</div>' if (p.get("body") or "").strip() else ''}
   <div class="pd-act">
     <a class="btn btn-solid" href="{esc(LINE_URL)}" target="_blank" rel="noopener" data-copy="{esc(msg)}">{svg('line')} 用 LINE 詢價</a>
     <a class="btn btn-line" href="tel:{TEL}">{svg('phone')} {esc(site.get("phone"))}</a>
   </div>
   <p class="pd-note">批發、大量訂購與客製印刷，報價依數量與交期另計。</p>
-  <div class="prose pd-body">{md(p.get("body"))}</div>
 </div>
 </article>
 {f'<section class="related"><div class="sec-hd"><h2>同類商品</h2><a class="more" href="{U["cat"](cid)}">看全部</a></div>{grid(siblings)}</section>' if siblings else ''}'''
