@@ -147,10 +147,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.3;letter-spacing
 .pd-thumbs img{width:100%;height:100%;object-fit:cover}
 .pd-cat{color:var(--jade);text-decoration:none;font-weight:700;font-size:14px}
 .pd h1{font-size:var(--step-3);font-weight:900;margin:6px 0 10px}
-.pd-price{font-family:var(--serif);font-size:var(--step-2);color:var(--tin);margin:0 0 24px}
+.pd-price{font-family:var(--serif);font-size:var(--step-2);color:var(--tin);margin:0 0 20px}
 .pd-act{display:flex;flex-wrap:wrap;gap:10px}
 .pd-note{font-size:14px;color:var(--muted);margin:14px 0 0}
-.pd-body{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.pd-body{margin:0 0 24px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pd-body>:last-child{margin-bottom:0}
 
 /* ---- 文章內容 ---- */
 .prose{line-height:1.95}
