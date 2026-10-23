@@ -368,7 +368,6 @@ def build_products():
     <a class="btn btn-solid" href="{esc(LINE_URL)}" target="_blank" rel="noopener" data-copy="{esc(msg)}">{svg('line')} 用 LINE 詢價</a>
     <a class="btn btn-line" href="tel:{TEL}">{svg('phone')} {esc(site.get("phone"))}</a>
   </div>
-  <p class="pd-note">批發、大量訂購與客製印刷，報價依數量與交期另計。</p>
 </div>
 </article>
 {f'<section class="related"><div class="sec-hd"><h2>同類商品</h2><a class="more" href="{U["cat"](cid)}">看全部</a></div>{grid(siblings)}</section>' if siblings else ''}'''
